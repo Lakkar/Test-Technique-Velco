@@ -18,7 +18,7 @@ public class TestTechniqueService {
     private TestTechniqueRepository testTechniqueRepository;
 
     /* Input: nothing
-     * Output: Multiple AbstractReferenceObject in an Iterable
+     * Output: Multiple AbstractReferenceObject in an ArrayList
      * Purpose: This function calls the readAll() function of the repository to get all AbstractReference Objects sorted*/
     public ArrayList<AbstractReference> getReferences() throws Exception {
         ArrayList<AbstractReference> allReferences = testTechniqueRepository.readAll();
