@@ -3,7 +3,7 @@ package com.velco.testtechnique.model;
 import lombok.Data;
 
 @Data
-public class ErrorReference extends AbstractReference{
+public class ErrorReference extends AbstractReference implements Comparable<AbstractReference>{
 
     private int line;
 
@@ -15,5 +15,14 @@ public class ErrorReference extends AbstractReference{
         this.line = line;
         this.message = message;
         this.value = value;
+    }
+
+    @Override
+    public int compareTo(AbstractReference abstractReference) {
+        if (abstractReference instanceof ErrorReference){
+            return (this.line - ((ErrorReference) abstractReference).getLine());
+        }else{
+            return 1;
+        }
     }
 }

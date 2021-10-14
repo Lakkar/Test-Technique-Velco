@@ -12,6 +12,9 @@ import java.util.Scanner;
 @Repository
 public class TestTechniqueRepository {
 
+    /* Input: nothing
+     * Output: An ArrayList of AbstratReference Objects
+     * Purpose: This function reads a file and returns an ArrayList of References and ErrorReferences*/
     public ArrayList<AbstractReference> readAll() throws Exception{
         File file = new File("src/main/resources/static/reference_data.txt");
         Scanner sc = new Scanner(file);
@@ -28,6 +31,9 @@ public class TestTechniqueRepository {
         return references;
     }
 
+    /* Input: String line, int numLine
+    * Output: An AbstratReference Object
+    * Purpose: This function checks the format of the line and returns a Reference or an ErrorReference depending on the result*/
     private AbstractReference createReference(String line, int numLine){
         String[] fields = line.split(";");
         if (fields.length==4){
