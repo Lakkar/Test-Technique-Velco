@@ -3,7 +3,7 @@ package com.velco.testtechnique.model;
 import lombok.Data;
 
 @Data
-public class ErrorReference {
+public class ErrorReference extends AbstractReference{
 
     private int line;
 

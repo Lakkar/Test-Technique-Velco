@@ -3,7 +3,7 @@ package com.velco.testtechnique.model;
 import lombok.Data;
 
 @Data
-public class Reference {
+public class Reference extends AbstractReference {
 
     private int numReference;
 
