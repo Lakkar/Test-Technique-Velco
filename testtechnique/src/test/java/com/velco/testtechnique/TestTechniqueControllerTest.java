@@ -25,8 +25,8 @@ public class TestTechniqueControllerTest {
     public void testGetReferences() throws Exception{
         mockMvc.perform(get("/references"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].numReference", is(1462100044)))
-                .andExpect(jsonPath("$[4].line", is(5)));
+                .andExpect(jsonPath("$[2].numReference", is(1462100403)))
+                .andExpect(jsonPath("$[5].line", is(4)));
 
     }
 }

@@ -22,7 +22,7 @@ public class TestTechniqueServiceTest {
         AbstractReference resultReference = testTechniqueService.getReferences().get(0);
         assertEquals(expectedReference,resultReference);
 
-        AbstractReference expectedError = new ErrorReference(5,"Incorrect value for color", "1462100403;A;100.1;9");
+        AbstractReference expectedError = new ErrorReference(3, "Incorrect value for size", "1460900849;P;13.2;-253");
         AbstractReference resultError = testTechniqueService.getReferences().get(4);
         assertEquals(expectedError,resultError);
     }

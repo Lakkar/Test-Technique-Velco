@@ -22,8 +22,8 @@ public class TestTechniqueRepositoryTest {
         AbstractReference resultReference = testTechniqueRepository.readAll().get(0);
         assertEquals(expectedReference,resultReference);
 
-        AbstractReference expectedError = new ErrorReference(5,"Incorrect value for color", "1462100403;A;100.1;9");
-        AbstractReference resultError = testTechniqueRepository.readAll().get(4);
+        AbstractReference expectedError = new ErrorReference(7,"Incorrect value for color", "1462100403;A;100.1;9");
+        AbstractReference resultError = testTechniqueRepository.readAll().get(6);
         assertEquals(expectedError,resultError);
     }
 }
